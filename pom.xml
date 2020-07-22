@@ -7,31 +7,19 @@
   <groupId>org.example</groupId>
   <artifactId>json-p</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <name>JSON-P integration with JAX-RS</name>
+  <packaging>war</packaging>
 
-  <name>json-p</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jsonp.version>1.1.2</jsonp.version>
-  </properties>
-
   <dependencies>
 
-    <!-- JSON-P API -->
     <dependency>
-      <groupId>javax.json</groupId>
-      <artifactId>javax.json-api</artifactId>
-      <version>${jsonp.version}</version>
-    </dependency>
-
-    <!-- JSON-P RI -->
-    <dependency>
-      <groupId>org.glassfish</groupId>
-      <artifactId>javax.json</artifactId>
-      <version>${jsonp.version}</version>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>8.0</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -53,22 +41,16 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.6.0</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.0</version>
         <configuration>
-          <executable>java</executable>
-          <arguments>
-            <argument>-classpath</argument>
-            <!-- automatically creates the classpath using all project dependencies,
-                 also adding the project build directory -->
-            <classpath/>
-            <argument>org.example.App</argument>
-          </arguments>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <warName>jsonp</warName>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
 </project>

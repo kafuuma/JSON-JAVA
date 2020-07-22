@@ -31,7 +31,7 @@
     "name": "Jason",
     "profession": "Lead of Argonauts",
     "bad-guy": false,
-    "kills": null
+    "kills": true
   }
 ]
 
