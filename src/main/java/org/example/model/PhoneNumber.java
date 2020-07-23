@@ -1,15 +1,10 @@
-package org.example.generics;
+package org.example.model;
 
 public class PhoneNumber {
     private String type;
     private String number;
 
     public PhoneNumber() {
-    }
-
-    public PhoneNumber(String type, String number) {
-        this.type = type;
-        this.number = number;
     }
 
     public String getType() {
@@ -36,3 +31,4 @@ public class PhoneNumber {
                 '}';
     }
 }
+

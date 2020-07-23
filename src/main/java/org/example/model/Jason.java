@@ -1,20 +1,22 @@
-package org.example.generics;
+package org.example.model;
+
+
 
 import java.util.List;
 
-public class Person {
+public class Jason {
+    private Integer id;
     private String name;
     private String profession;
 
     private List<PhoneNumber> phoneNumbers;
 
-    public Person() {
+    public Integer getId() {
+        return id;
     }
 
-    public Person(String name, String profession, List<PhoneNumber> phoneNumbers) {
-        this.name = name;
-        this.profession = profession;
-        this.phoneNumbers = phoneNumbers;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -41,12 +43,14 @@ public class Person {
         this.phoneNumbers = phoneNumbers;
     }
 
+
     @Override
     public String toString() {
-        return "Person{" +
+        return "Jason{" +
                 "name='" + name + '\'' +
                 ", profession='" + profession + '\'' +
                 ", phoneNumbers=" + phoneNumbers +
                 '}';
     }
 }
+
