@@ -22,6 +22,7 @@ public class JasonResource {
         return jsons;
     }
 
+    @GET
     public Jason doGet(@QueryParam("id") int id){
         for(Jason jason: jsons){
             if(jason.getId() == id){
@@ -29,6 +30,33 @@ public class JasonResource {
             }
         }
         return null;
+    }
+
+    @PUT
+    public void doPost(Jason jason){
+        for(int i=0; i<jsons.size(); i++){
+            if(jsons.get(i).getId() == jason.getId()){
+                jsons.set(i, jason);
+                return;
+            }
+        }
+    }
+
+    @POST
+    public List<Jason> doPut(Jason jason) {
+        jsons.add(jason);
+        return jsons;
+    }
+
+    @DELETE
+    public List<Jason> doDelete(@QueryParam("id") int id) {
+        for (Jason jason : jsons) {
+            if (jason.getId() == id) {
+                jsons.remove(jason);
+                break;
+            }
+        }
+        return jsons;
     }
 
 }
