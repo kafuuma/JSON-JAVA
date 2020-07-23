@@ -2,8 +2,6 @@
   {
     "name": "Jason Bourne",
     "profession": "Super agent",
-    "bad-guy": false,
-    "kills": 1000,
     "phoneNumbers": [
       {
         "type": "home",
@@ -18,8 +16,6 @@
   {
     "name": "Jason Voorhees",
     "profession": "Maniac killer",
-    "bad-guy": true,
-    "kills": 100,
     "phoneNumbers": [
       {
         "type": "office",
@@ -29,9 +25,6 @@
   },
   {
     "name": "Jason",
-    "profession": "Lead of Argonauts",
-    "bad-guy": false,
-    "kills": true
+    "profession": "Lead of Argonauts"
   }
 ]
-
